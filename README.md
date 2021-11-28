@@ -10,4 +10,14 @@ Para usar la aplicación unicamente debe rellenar los campos que se piden :
 3) Establecer el numero de vecinos que se va a considerar. (No introducir mas vecinos que las personas registradas en la matriz).
 4) Que formula de prediccion se usará
     - Predicción Simple.    
-    - Diferencia con la media.
+    - Diferencia con la media. 
+
+ ## Ejemplo de uso
+
+ Se rellenan los campos como se aprecia en la siguiente imagen :
+
+ ![Llenando los campos](images/ejem1.png)   
+
+ Una vez rellenado todos los campos, damos click en calcular y nos aparecera la siguiente informacion :
+ 
+ ![Llenando los campos](images/ejem2.png) 
