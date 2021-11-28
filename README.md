@@ -18,6 +18,6 @@ Para usar la aplicación unicamente debe rellenar los campos que se piden :
 
  ![Llenando los campos](images/ejem1.png)   
 
- Una vez rellenado todos los campos, damos click en calcular y nos aparecera la siguiente informacion :
+ Una vez rellenados todos los campos, damos click en calcular y nos aparecerá la siguiente información :
  
  ![Llenando los campos](images/ejem2.png) 
