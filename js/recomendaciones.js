@@ -8,7 +8,7 @@ let matriz = [];
 let matriz_resultado = [];
 let matriz_similitud = [];
 let pos_cal = [];
-let vecinos_utilizados = [];
+
 
 
 
@@ -224,27 +224,24 @@ function promedio(usuario) {
 }
 
 function vecinosCercanos(persona) {
+    let orden;
+    if(metrica.value != "euclidea") {
+        orden = [...persona].sort((a, b) => {
+            return b.valor - a.valor
+        });
 
-    let orden = [...persona].sort((a, b) => {
-        return b.valor - a.valor
-    });
-
-    // let orden = [...persona].sort(function (a, b) {
-    //     if (a.valor < b.valor) {
-    //         return 1;
-    //     }
-    //     if (a.valor > b.valor) {
-    //         return -1;
-    //     }
-    //     return 0;
-    // });
+    } else {
+        orden = [...persona].sort((a, b) => {
+            return a.valor - b.valor
+        });
+    }
 
     return orden
 }
 
 function preMedia(numero_vecinos) {
 
-    vecinos_utilizados = [];
+
 
     matriz_resultado = matriz.map(function (arr) {
         return arr.slice();
@@ -267,8 +264,6 @@ function preMedia(numero_vecinos) {
         console.log(vecinos_cercanos);
 
         for (let j = 0; j < numero_vecinos; j++) {
-            const vutilizado = { vecino: vecinos_cercanos[j].persona, persona: pos_cal[i].persona }
-            vecinos_utilizados.push(vutilizado);
             let condition;
             console.log("numerador antes = " + num);
             if ((matriz[vecinos_cercanos[j].persona][pos_cal[i].item]) == '-') {
@@ -312,9 +307,6 @@ function preMedia(numero_vecinos) {
 
 function preSimple(numero_vecinos) {
 
-    vecinos_utilizados = [];
-
-
     matriz_resultado = matriz.map(function (arr) {
         return arr.slice();
     });
@@ -335,8 +327,7 @@ function preSimple(numero_vecinos) {
         console.log(vecinos_cercanos);
 
         for (let j = 0; j < numero_vecinos; j++) {
-            const vutilizado = { vecino: vecinos_cercanos[j].persona, persona: pos_cal[i].persona }
-            vecinos_utilizados.push(vutilizado);
+
             let condition;
             console.log("numerador antes = " + num);
             if ((matriz[vecinos_cercanos[j].persona][pos_cal[i].item]) == '-') {
