@@ -21,3 +21,7 @@ Para usar la aplicación unicamente debe rellenar los campos que se piden :
  Una vez rellenados todos los campos, damos click en calcular y nos aparecerá la siguiente información :
  
  ![Llenando los campos](images/ejem2.png) 
+
+ ## Pagina de la app
+
+ [Sistemas de recomendación](https://alu0101281308.github.io/GCO-sistemas-de-recomendacion/)
